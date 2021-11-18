@@ -8,5 +8,8 @@
 #
 #----------------------------------------------------------------------------------------------------------
 
-import Ym_alignNodes
-Ym_alignNodes.alignCY()
+from mps2 import MassivePanelPySide
+
+nodes = nuke.selectedNodes()
+mp = MassivePanelPySide()
+mp.alignNodes(nodes, direction="y")
