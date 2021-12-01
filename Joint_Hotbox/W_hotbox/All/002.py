@@ -8,11 +8,8 @@
 #
 #----------------------------------------------------------------------------------------------------------
 
-count=0
-moveBy=75
+from mps2 import MassivePanelPySide
 
-for i in nuke.selectedNodes():
-    m=count%3
-    i.autoplace()
-    i.setXYpos(i.xpos(), i.ypos()+(m*moveBy))
-    count+=1
+nodes = nuke.selectedNodes()
+mp = MassivePanelPySide()
+mp.checkerboardNodesAll()
